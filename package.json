@@ -4,15 +4,24 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
+    "gh-pages": "^1.0.0",
+    "node-less-chokidar": "^0.1.2",
+    "npm-run-all": "^4.0.2",
+    "prop-types": "^15.5.10",
     "react-scripts": "1.0.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "run-s -n build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "node-less-chokidar src/ src/",
+    "watch-css": "npm run build-css && node-less-chokidar src/ src/ --watch --recursive"
   }
 }
