@@ -1,0 +1,72 @@
+.serviceDirectory {
+    margin: 0 227px;
+    
+    &__header {
+        padding-top: 14px;
+    }
+
+    &__title {
+        float: left;
+    }
+
+    &__link {
+        float: right;
+        border-radius: 5px;
+        background-color:  #87b448;
+        width: 145px;
+        height: 30px;
+        line-height: 30px;
+        color:  #ffffff;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    &__list {
+        text-align: center;
+        margin-top: 48px;
+        border: @border;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+}
+
+.serviceCategory {
+    display: inline-block;
+    position: relative;
+    width: 138px;
+    height: 184px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    
+    &__iconWrapper {
+        position: relative;
+        border: @border;
+        width: 100%;
+        height: 138px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -60px;
+        margin-left: -60px;
+        width: 120px;
+        height: 120px;
+    }
+
+    &__title {
+        display: inline-block;
+        position: absolute;
+        height: 28px;
+        width: 100%;
+        left: 0;
+        margin-top: 15px;
+        text-align: center;
+        color:  #1c2534;
+        font-size: 14px;
+        line-height: 14px;
+        text-overflow: ellipsis;
+    }
+}
