@@ -7,15 +7,16 @@ class ErrorPopup extends Component {
   }
 
   destroy() {
-    ReactDOM.unmountComponentAtNode(document.getElementById('popup'));
+    ReactDOM.unmountComponentAtNode(document.getElementById('errorPopupContainer'));
   }
   
   renderPopup() {
-    let popup = document.createElement("div");
-    popup.setAttribute('id', 'popup');
-    document
-      .body
-      .appendChild(popup);
+    if(!document.getElementById('errorPopupContainer')){
+      let popup = document.createElement("div");
+      popup.setAttribute('id', 'errorPopupContainer');
+      document.body.appendChild(popup);
+    }
+    
     ReactDOM.render(
       <div className="errorPopup">
       <h2 className="errorPopup__message">{this.props.error.message}</h2>
@@ -23,8 +24,8 @@ class ErrorPopup extends Component {
         <code className="errorPopup__code">{this.props.error.code} </code>
         {this.props.error.description}
       </p>
-      <a className="errorPopup__closeBtn" onClick={this.destroy} href="#" title="close popup"></a>
-    </div>, document.getElementById('popup'));
+      <a className="errorPopup__closeBtn" onClick={this.destroy} href="#!" title="close popup"></a>
+    </div>, document.getElementById('errorPopupContainer'));
   }
 
   render(){

@@ -11,9 +11,9 @@ const TopMenu = () => (
       </Link>
       <input className="topMenu__searchInput" type="text" placeholder="Company Name"/>
       <div className="userPanel">
-        <a className="userPanel__chat" href="#" title="chat"></a>
-        <a className="userPanel__notifications" href="#" title="notifications"></a>
-        <a className="userPanel__profile" href="#" title="profile">
+        <a className="userPanel__chat" href="#!" title="chat"></a>
+        <a className="userPanel__notifications" href="#!" title="notifications"></a>
+        <a className="userPanel__profile" href="#!" title="profile">
           <img className="profileAvatar" src={avatar} alt="user"/>
           Maximillian Beekeeper
         </a>

@@ -25,7 +25,7 @@ const LeftSidebar = () => (
     <section className="companiesList">
       <header className="companiesList__header">
         <h4 className="companiesList__title">Featured Companies</h4>
-        <a className="companiesList__seeAll" href="#" alt="See All">See All</a>
+        <a className="companiesList__seeAll" href="#!!" alt="See All">See All</a>
       </header>
       <ul className="companiesList__list">
 
@@ -33,7 +33,7 @@ const LeftSidebar = () => (
           <li className="company" key={company.id}>
             <img className="company__img" src={company.img} alt="Company Name"/>
             <div className="company__dataWrapper">
-              <a className="company__name" href="#" title="Company Name">
+              <a className="company__name" href="#!" title="Company Name">
                 <h3>Company Name</h3>
               </a>
               <p className="company__data">
@@ -41,7 +41,7 @@ const LeftSidebar = () => (
                 <br/>
                 <span className="company__city">{company.city}</span>
               </p>
-              <a className="company__followBtn" href="#">Follow Now</a>
+              <a className="company__followBtn" href="#!">Follow Now</a>
             </div>
           </li>
         ))
@@ -51,8 +51,8 @@ const LeftSidebar = () => (
     </section>
     <footer className="leftSidebar__footer">
       <p className="leftSidebar__copyright">Denteez Copyright 2015</p>
-      <a className="leftSidebar__termsOfUse" href="#" title="terms of use">Terms of use</a>
-      <a className="leftSidebar__privacyPolicy" href="#" title="privacy policy">Privacy Policy</a>
+      <a className="leftSidebar__termsOfUse" href="#!" title="terms of use">Terms of use</a>
+      <a className="leftSidebar__privacyPolicy" href="#!" title="privacy policy">Privacy Policy</a>
     </footer>
   </aside>
 );

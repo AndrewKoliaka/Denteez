@@ -9,13 +9,13 @@ const RightSidebar = () => (
   <aside className="rightSidebar">
     <header className="rightSidebar__header rightSidebar__header--1">
       <p className="rightSidebar__headerText">People you may know</p>
-      <a className="rightSidebar__seeAll" href="#">See All</a>
+      <a className="rightSidebar__seeAll" href="#!">See All</a>
     </header>
 
     <ul className="rightSidebar__peopleList">
       {PEOPLE.map(person => (
         <li className="person" key={person.id}>          
-          <a className="person__name" href="#"><h3>{person.name}</h3></a>
+          <a className="person__name" href="#!"><h3>{person.name}</h3></a>
           <div className="person__wrapper">
             <img className="person__image" src={person.img} alt={person.name}/>
             <div className="person__data">
@@ -25,7 +25,7 @@ const RightSidebar = () => (
               <div className="person__city">
                 {person.city}
               </div>
-              <a className="person__addFriend" href="#">Add Friend</a>
+              <a className="person__addFriend" href="#!">Add Friend</a>
             </div>
           </div>
         </li>
@@ -35,7 +35,7 @@ const RightSidebar = () => (
 
     <header className="rightSidebar__header rightSidebar__header--2">
       <p className="rightSidebar__headerText">Featured Products</p>
-      <a className="rightSidebar__seeAll" href="#">See All</a>
+      <a className="rightSidebar__seeAll" href="#!">See All</a>
     </header>
 
     <ul className="rightSidebar__productsList">
