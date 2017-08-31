@@ -7,7 +7,7 @@ const TopMenu = () => (
   <header className="topMenu">
     <div className="container">
       <Link className="topMenu__logo" to="/">
-        <img src={logo} alt="logo"/>
+        <div className="siteLogo"></div>
       </Link>
       <input className="topMenu__searchInput" type="text" placeholder="Company Name"/>
       <div className="userPanel">

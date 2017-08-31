@@ -25,7 +25,7 @@ class NameInput extends Input {
 
   render() {
     return (
-      <div className="inputBlock">
+      <div className="inputBlock inputBlock--left">
         <label className="inputBlock__label" htmlFor="userNameInput">Name *</label>
         <input
           className="inputBlock__input"
@@ -35,7 +35,7 @@ class NameInput extends Input {
           placeholder="Dentist"
           required
           onBlur={this.validate}/>
-        <div className="inputBlock__errorMessage" ref="error"></div>
+        <div className="inputBlock__errorMessage inputBlock__errorMessage--hidden" ref="error"></div>
       </div>
     );
   }

@@ -1,15 +1,13 @@
 import React from 'react';
 import Header from './header';
-import Middle from './middle';
+import Main from './main';
 import Footer from './footer';
-import Form from './form';
 
 const ContactUs = () => (
-  <div className="container">
+  <div>
     <Header/>
-    <Middle/>
+    <Main/>
     <Footer/>
-    <Form/>
   </div>
 );
 

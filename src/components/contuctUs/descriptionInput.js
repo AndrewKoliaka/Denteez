@@ -33,16 +33,14 @@ class DescriptionInput extends Input {
         <label className="inputBlock__label" htmlFor="descriptionInput">Description *</label>
         <span className="charactersNumber">(<span ref="charNumber">0</span>/1000)</span>
         <textarea
-          className="inputBlock__input"
+          className="inputBlock__input inputBlock__input--textarea"
           id="descriptionInput"
           name="description"
-          rows="6"
-          cols="20"
           required
           maxLength="1000"
           onChange={this.displayLength}
           onBlur={this.validate}></textarea>
-        <div className="inputBlock__errorMessage" ref="error"></div>
+        <div className="inputBlock__errorMessage inputBlock__errorMessage--hidden" ref="error"></div>
       </div>
     );
   }

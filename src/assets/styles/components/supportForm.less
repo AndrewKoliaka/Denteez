@@ -1,0 +1,143 @@
+.supportForm {
+    position: absolute;
+    top: -102px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'ProximaNova', sans-serif;
+    border-radius: 5px;
+    border: thin solid #e0e2e6;
+    background-color: #ffffff;
+    width: 758px;
+    padding: 18px;
+    box-sizing: border-box;
+
+    &__topText {
+        color: #c1c1c1;
+        font-size: 16px;
+        display: inline-block;
+        margin-bottom: 14px;
+    }
+
+    &__submitBtn {
+        position: absolute;
+        left: 1px;
+        right: 1px;
+        bottom: -76px;
+        border-radius: 5px;
+        background-color:  #87b448;
+        border: none;
+        width: 100%;
+        height: 52px;
+        font-size: 16px;
+        color: #ffffff;
+    }
+}
+
+.inputBlock {
+    margin-bottom: 20px;
+
+    &__label {
+        color: @fontGrayDark;
+        font-size: 16px;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        border-radius: 5px;
+        border: thin solid #c8cdd5;
+        background-color:  #ffffff;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        box-sizing: border-box;
+
+        &::-webkit-input-placeholder {
+            color:  #7c8695;
+        }
+
+        &--textarea {
+            width: 718px;
+            height: 150px;
+        }
+
+        &--valid {
+            border-color: @accent;
+        }
+
+        &--invalid {
+            border-color: #FF7373;
+        }
+    }
+
+    &--photo {
+        margin-bottom: -1px;
+        float: left;
+    }
+
+    &__errorMessage {
+        text-align: center;
+        color: #FF7373;
+        font-size: 13px;
+        margin-top: 10px;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &--left, &--right {
+        width: 344px;
+    }
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        float: right;
+    }
+
+    .charactersNumber {
+        float: right;
+        color: @fontGrayDark;
+    }
+}
+
+.photoInput {
+    margin-top: -2px;
+    border-radius: 4px;
+    border: thin solid #c8cdd5;
+    background-color: #f7f7f7;
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+    text-align: center;
+
+    &__title {
+        color: @fontGrayLight;
+        margin-top: 29px;
+    }
+
+    &__text {
+        color: #c2c3c4;
+        font-size: 12px;
+        margin-top: 7px;
+        line-height: 14px;
+    }
+
+    &__input {
+        display: none;
+    }
+}
+
+.uploadedImage {
+    display: inline-block;
+    margin-left: 20px;
+    overflow: visible;
+    z-index: 9999;
+}

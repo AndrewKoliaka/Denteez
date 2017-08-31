@@ -26,7 +26,7 @@ class EmailInput extends Input {
 
   render() {
     return (
-      <div className="inputBlock">
+      <div className="inputBlock inputBlock--right">
         <label className="inputBlock__label" htmlFor="userEmailInput">Email *</label>
         <input
           className="inputBlock__input"
@@ -37,7 +37,7 @@ class EmailInput extends Input {
           required
           onBlur={this.validate}
           />
-        <div className="inputBlock__errorMessage" ref="error"></div>
+        <div className="inputBlock__errorMessage inputBlock__errorMessage--hidden" ref="error"></div>
       </div>
     );
   }

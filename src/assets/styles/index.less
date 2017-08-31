@@ -4,5 +4,26 @@
 @import './fonts.less';
 @import './icons.less';
 @import './mixins.less';
-
 @import './components/index.less';
+
+.container {
+    position: relative;
+    padding: 0 15px;
+    box-sizing: border-box;
+    max-width: 1440px;
+    min-width: 970px;
+    margin: 0 auto;
+}
+
+.siteLogo {
+    width: 130px;
+    height: 40px;
+    background-image: url('../images/logo.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .siteLogo {
+        background-image: url('../images/logo-retina.png');
+    }
+}

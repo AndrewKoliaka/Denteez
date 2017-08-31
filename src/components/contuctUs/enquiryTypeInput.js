@@ -75,7 +75,7 @@ class EnquiryTypeInput extends Input {
             placeholder="Other"
             required
             onBlur={this.validate}/>
-          <div className="inputBlock__errorMessage"></div>
+          <div className="inputBlock__errorMessage inputBlock__errorMessage--hidden" ref="error"></div>
         </div>
       );
     }
@@ -99,7 +99,6 @@ class EnquiryTypeInput extends Input {
               ))
             }
           </select>
-          <div className="inputBlock__errorMessage" ref="error"></div>
         </div>
         {otherInput}
       </div>

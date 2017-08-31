@@ -62,7 +62,7 @@ class SupportForm extends Component {
     return (
       <form className="supportForm" method="POST" action="#" onSubmit={this.submit}>
         <span className="supportForm__topText">Fields marked
-          <sup>"+"</sup>
+          <sup> "+" </sup>
           are required</span>
         <EnquiryTypeInput/>
         <div className="supportForm__inputsRow">
@@ -72,7 +72,7 @@ class SupportForm extends Component {
         <SubjectInput/>
         <DescriptionInput/>
         <PhotoInput/>
-        <input type="submit" value="Submit"/>
+        <input className="supportForm__submitBtn" type="submit" value="Submit"/>
       </form>
     );
   }
