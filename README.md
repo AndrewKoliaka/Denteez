@@ -1,4 +1,4 @@
-# Test task
+# Denteez
 
 Download & install nodeJS from https://nodejs.org/
 
