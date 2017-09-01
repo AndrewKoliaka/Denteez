@@ -1,4 +1,12 @@
-import {FETCH_SERVICES, ADD_INPUT_DATA, RESET_INPUTS_DATA, SUBMIT_FORM, SUBMITTED_FORM_POPUP_WAS_SHOWN} from './types';
+import {
+  FETCH_SERVICES,
+  ADD_INPUT_DATA,
+  RESET_INPUTS_DATA,
+  SUBMIT_FORM,
+  SUBMITTED_FORM_POPUP_WAS_SHOWN,
+  ADD_PHOTO,
+  REMOVE_PHOTO
+} from './types';
 import {getCategories} from '../scripts/api';
 
 export function fetchServices() {
@@ -21,4 +29,12 @@ export function submitForm(response) {
 
 export function submittedFormPopupWasShown() {
   return {type: SUBMITTED_FORM_POPUP_WAS_SHOWN};
+}
+
+export function addPhoto(file) {
+  return {type: ADD_PHOTO, payload: file};
+}
+
+export function removePhoto(file) {
+  return {type: REMOVE_PHOTO, payload: file}
 }

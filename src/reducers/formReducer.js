@@ -1,4 +1,11 @@
-import {ADD_INPUT_DATA, RESET_INPUTS_DATA, SUBMIT_FORM, SUBMITTED_FORM_POPUP_WAS_SHOWN} from '../actions/types';
+import {
+  ADD_INPUT_DATA,
+  RESET_INPUTS_DATA,
+  SUBMIT_FORM,
+  SUBMITTED_FORM_POPUP_WAS_SHOWN,
+  ADD_PHOTO,
+  REMOVE_PHOTO
+} from '../actions/types';
 
 const initialState = {
   inputsData: {
@@ -11,7 +18,7 @@ const initialState = {
     email: null,
     subject: null,
     description: null,
-    file: null
+    file: []
   },
   isSubmitted: false,
   success: false,
@@ -19,14 +26,44 @@ const initialState = {
 };
 
 export default function formReducer(state = initialState, action) {
+  let updatedInputsData;
+
   switch (action.type) {
     case ADD_INPUT_DATA:
-
-      let updatedInputsData;
-
       if (state.inputsData.hasOwnProperty(action.payload.name)) {
         updatedInputsData = Object.assign({}, state.inputsData);
         updatedInputsData[action.payload.name] = action.payload.value;
+        return Object.assign({}, state, {inputsData: updatedInputsData});
+      } else {
+        return state;
+      }
+    case ADD_PHOTO:
+      if (action.payload instanceof File) {
+        let photos = [
+          ...state.inputsData.file,
+          action.payload
+        ];
+
+        updatedInputsData = Object.assign({}, state.inputsData, {file: photos});
+        return Object.assign({}, state, {inputsData: updatedInputsData});
+      } else {
+        return state;
+      }
+
+    case REMOVE_PHOTO:
+      let index = state
+        .inputsData
+        .file
+        .indexOf(action.payload);
+
+      if (index > -1) {
+        let photos = [
+          ...state.inputsData.file.slice(0, index),
+          ...state.inputsData.file.slice(index + 1)
+        ];
+
+        updatedInputsData = Object.assign({}, state.inputsData, {file: photos});
+
         return Object.assign({}, state, {inputsData: updatedInputsData});
       } else {
         return state;
