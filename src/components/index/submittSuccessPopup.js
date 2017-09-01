@@ -19,11 +19,11 @@ class SuccessPopup extends Component {
     
     ReactDOM.render(
       <div className="messagePopup">
-      <h2 className="messagePopup__title">Your form has been sent</h2>
+      <h3 className="messagePopup__title">Form has been sent</h3>
       <p className="messagePopup__description">
         {this.props.data.message}
       </p>
-      <button className="messagePopup__okBtn" onClick={this.destroy}>Ok</button>
+      <button className="messagePopup__okBtn" onClick={this.destroy} autoFocus>Ok</button>
     </div>, document.getElementById('messagePopupContainer'));
   }
 

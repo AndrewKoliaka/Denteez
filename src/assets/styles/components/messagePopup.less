@@ -1,0 +1,44 @@
+.messagePopup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    border: 5px solid @accent;
+    z-index: 9999;
+    background-color: #ffffff;
+    text-align: center;
+
+    &__title {
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    &__description {
+        margin-top: 20px;
+        line-height: 20px;
+    }
+
+    &__okBtn {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-color:  @accent;
+        line-height: 30px;
+        color:  #ffffff;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+    }
+}

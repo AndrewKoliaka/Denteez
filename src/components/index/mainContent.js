@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 
 const MainContent = ({isFormSubmitted, success, error}) => {
   let popup = null;
-  console.log(isFormSubmitted, success);
 
   if (isFormSubmitted) {
     popup = success
